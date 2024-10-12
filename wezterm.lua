@@ -31,4 +31,7 @@ config.keys = {
     { key=")", mods="CTRL|SHIFT", action=act.ActivateTab(8) },
 }
 
+config.default_domain = "WSL:Ubuntu"
+config.default_cwd = "/home/ubuntu"
+
 return config
