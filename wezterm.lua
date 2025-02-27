@@ -6,6 +6,8 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
+config.default_prog = {"powershell.exe"}
+
 -- config.color_scheme = "Materia (base16)"
 -- config.color_scheme = 's3r0 modified (terminal.sexy)'
 config.color_scheme = 'Darcula (base16)'
@@ -29,9 +31,13 @@ config.keys = {
     { key="\'", mods="CTRL|SHIFT", action=act.ActivateTab(6) },
     { key="(", mods="CTRL|SHIFT", action=act.ActivateTab(7) },
     { key=")", mods="CTRL|SHIFT", action=act.ActivateTab(8) },
+    { key="c", mods="CTRL|SHIFT", action=act.SpawnCommandInNewTab {args={"cmd.exe"}}},
 }
 
-config.default_domain = "WSL:Ubuntu"
-config.default_cwd = "/home/ubuntu"
+config.launch_menu = {
+    { label = "Powershell", args = {"powershell.exe"}, },
+    { label = "cmd", args = {"cmd.exe"}, },
+    { label = "wsl", args = {"wsl"}, },
+}
 
 return config
