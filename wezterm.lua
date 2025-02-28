@@ -6,7 +6,7 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
-config.default_prog = {"powershell.exe"}
+config.default_prog = {"powershell.exe", "-NoLogo"}
 
 -- config.color_scheme = "Materia (base16)"
 -- config.color_scheme = 's3r0 modified (terminal.sexy)'
@@ -31,12 +31,12 @@ config.keys = {
     { key="\'", mods="CTRL|SHIFT", action=act.ActivateTab(6) },
     { key="(", mods="CTRL|SHIFT", action=act.ActivateTab(7) },
     { key=")", mods="CTRL|SHIFT", action=act.ActivateTab(8) },
-    { key="c", mods="CTRL|SHIFT", action=act.SpawnCommandInNewTab {args={"cmd.exe"}}},
+    { key="c", mods="CTRL|SHIFT", action=act.SpawnCommandInNewTab {args={"cmd.exe", "/k"}}},
 }
 
 config.launch_menu = {
-    { label = "Powershell", args = {"powershell.exe"}, },
-    { label = "cmd", args = {"cmd.exe"}, },
+    { label = "Powershell", args = {"powershell.exe", "-NoLogo"}, },
+    { label = "cmd", args = {"cmd.exe", "/k"}, },
     { label = "wsl", args = {"wsl", "--cd", "/home/ubuntu"}, },
 }
 
