@@ -17,6 +17,8 @@ config.font = wezterm.font "HackGen Console NF"
 config.initial_rows = 35
 config.initial_cols = 120
 
+-- config.treat_east_asian_ambiguous_width_as_wide = true
+
 config.keys = {
     { key="|", mods="CTRL|SHIFT", action=act.SplitPane { direction="Right" }},
     { key="=", mods="CTRL|SHIFT", action=act.SplitPane { direction="Down" }},
