@@ -38,6 +38,7 @@ config.keys = {
 
 config.launch_menu = {
     { label = "Powershell", args = {"powershell.exe", "-NoLogo"}, },
+    { label = "Powershell 7", args = {"pwsh.exe", "-NoLogo"}, },
     { label = "cmd", args = {"cmd.exe", "/k"}, },
     { label = "wsl", args = {"wsl", "--cd", "/home/ubuntu"}, },
 }
