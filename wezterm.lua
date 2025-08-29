@@ -6,7 +6,12 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
-config.default_prog = {"powershell.exe", "-NoLogo"}
+if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    config.default_prog = {"powershell.exe", "-NoLogo"}
+end
+if wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
+    -- config.default_prog = {"powershell.exe", "-NoLogo"}
+end
 
 -- config.color_scheme = "Materia (base16)"
 -- config.color_scheme = 's3r0 modified (terminal.sexy)'
