@@ -29,16 +29,18 @@ config.keys = {
     { key="=", mods="CTRL|SHIFT", action=act.SplitPane { direction="Down" }},
     { key="W", mods="CTRL|SHIFT", action=act.CloseCurrentPane { confirm=false }},
     { key="d", mods="CTRL|SHIFT", action=act.PaneSelect },
-    { key="!", mods="CTRL|SHIFT", action=act.ActivateTab(0) },
-    { key="\"", mods="CTRL|SHIFT", action=act.ActivateTab(1) },
-    { key="#", mods="CTRL|SHIFT", action=act.ActivateTab(2) },
-    { key="$", mods="CTRL|SHIFT", action=act.ActivateTab(3) },
-    { key="%", mods="CTRL|SHIFT", action=act.ActivateTab(4) },
-    { key="&", mods="CTRL|SHIFT", action=act.ActivateTab(5) },
-    { key="\'", mods="CTRL|SHIFT", action=act.ActivateTab(6) },
-    { key="(", mods="CTRL|SHIFT", action=act.ActivateTab(7) },
-    { key=")", mods="CTRL|SHIFT", action=act.ActivateTab(8) },
-    { key="c", mods="CTRL|SHIFT", action=act.SpawnCommandInNewTab {args={"cmd.exe", "/k"}}},
+
+    { key="F1", mods="CTRL|SHIFT", action=act.ActivateTab(0) },
+    { key="F2", mods="CTRL|SHIFT", action=act.ActivateTab(1) },
+    { key="F3", mods="CTRL|SHIFT", action=act.ActivateTab(2) },
+    { key="F4", mods="CTRL|SHIFT", action=act.ActivateTab(3) },
+    { key="F5", mods="CTRL|SHIFT", action=act.ActivateTab(4) },
+    { key="F6", mods="CTRL|SHIFT", action=act.ActivateTab(5) },
+    { key="F7", mods="CTRL|SHIFT", action=act.ActivateTab(6) },
+    { key="F8", mods="CTRL|SHIFT", action=act.ActivateTab(7) },
+    { key="F9", mods="CTRL|SHIFT", action=act.ActivateTab(8) },
+
+    --    { key="c", mods="CTRL|SHIFT", action=act.SpawnCommandInNewTab {args={"cmd.exe", "/k"}}},
 }
 
 config.launch_menu = {
